@@ -1,0 +1,23 @@
+# Python / 依赖
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.db
+
+# IDE
+.vscode/
+.idea/
+
+# 中间产物
+temp/
+output/
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# 数据库备份
+*.db.bak
+*.db_backup*

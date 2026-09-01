@@ -1,0 +1,15 @@
+INFO:     127.0.0.1:49583 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49584 - "POST /api/students HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49585 - "POST /api/groups HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49590 - "POST /api/groups/6/members HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49591 - "POST /api/student/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49592 - "GET /api/student/me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49593 - "GET /api/student/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49594 - "GET /api/student/assignments HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49595 - "POST /api/student/assignments/1/submit HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:49596 - "GET /api/student/materials HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49597 - "GET /api/student/group HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49598 - "GET /api/student/notifications HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49599 - "POST /api/student/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49600 - "GET /api/students HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49601 - "GET /api/groups HTTP/1.1" 200 OK

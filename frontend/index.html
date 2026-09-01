@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>知行安信教学平台</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, "Microsoft YaHei", sans-serif;
+      background: #f5f5f5;
+      display: flex; justify-content: center; align-items: center;
+      min-height: 100vh;
+    }
+    .card {
+      background: #fff; border-radius: 16px; padding: 48px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08); text-align: center; max-width: 420px; width: 90%;
+    }
+    .card h1 { color: #4b3a73; font-size: 26px; margin-bottom: 12px; }
+    .card p { color: #666; margin-bottom: 32px; line-height: 1.6; }
+    .btn {
+      display: inline-block; padding: 14px 36px;
+      background: #5e4fcf; color: #fff; border-radius: 10px;
+      text-decoration: none; font-size: 16px; font-weight: 600;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #4b3a73; }
+    .note { margin-top: 20px; font-size: 13px; color: #999; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>知行安信教学平台</h1>
+    <p>安全工程专业 · 零信任轻量级DDoS防护教学环境</p>
+    <a class="btn" id="goBtn" href="#">进入平台</a>
+    <div class="note">平台正在初始化…</div>
+  </div>
+  <script>
+    // 根据前端是否部署成功，自动跳转
+    const goBtn = document.getElementById('goBtn');
+    goBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      // 尝试跳转到部署好的前端入口
+      const paths = [
+        import.meta.url.replace(/(\?[^]*)?$/, '') + 'frontend.html'  // Vite 环境
+      ];
+      // 直接跳转（如果 GitHub Pages 配置了前端入口）
+      window.location.href = location.origin + '/static/前端.html';
+    });
+    // 自动跳转（页面加载后 1 秒）
+    setTimeout(function() {
+      window.location.href = location.origin + '/static/前端.html';
+    }, 1000);
+  </script>
+</body>
+</html>
