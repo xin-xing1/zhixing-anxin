@@ -1,8 +1,9 @@
 # WSGI entry - used for PythonAnywhere / Render / Railway
+import os
 import sys
 
-# Add the project's backend directory to the path
-project_dir = r"C:\Users\Lenovo\Desktop\知行安信平台\backend"
+# Add this backend directory to sys.path (cross-platform, no hardcoded path)
+project_dir = os.path.dirname(os.path.abspath(__file__))
 if project_dir not in sys.path:
     sys.path.insert(0, project_dir)
 
