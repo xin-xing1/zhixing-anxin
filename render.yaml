@@ -1,0 +1,14 @@
+# Render Blueprint 配置：连接仓库后自动创建并部署 Web Service
+services:
+  - type: web
+    name: zhixing-anxin
+    runtime: docker
+    repo: https://github.com/xin-xing1/zhixing-anxin
+    branch: master
+    dockerfilePath: ./Dockerfile
+    plan: free
+    autoDeploy: true
+    healthCheckPath: /
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
