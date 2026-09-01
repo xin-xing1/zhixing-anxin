@@ -44,12 +44,12 @@
       const paths = [
         import.meta.url.replace(/(\?[^]*)?$/, '') + 'frontend.html'  // Vite 环境
       ];
-      // 直接跳转（如果 GitHub Pages 配置了前端入口）
-      window.location.href = location.origin + '/static/前端.html';
+      // 直接跳转到平台入口（相对路径，兼容子路径部署）
+      window.location.href = 'static/前端.html';
     });
-    // 自动跳转（页面加载后 1 秒）
+    // 自动跳转（页面加载后 1 秒），相对路径兼容子路径部署
     setTimeout(function() {
-      window.location.href = location.origin + '/static/前端.html';
+      window.location.href = 'static/前端.html';
     }, 1000);
   </script>
 </body>

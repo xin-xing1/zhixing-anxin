@@ -2131,16 +2131,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         // ========== 全局配置 ==========
-        const API_BASE = (function(){
-            // 部署模式：优先取 URL ?api= 参数，其次 localStorage，最后回退本机开发地址
-            try {
-                const urlApi = new URLSearchParams(location.search).get('api');
-                if (urlApi) { localStorage.setItem('zxax_api_base', urlApi); return urlApi.replace(/\/+$/, ''); }
-                const saved = localStorage.getItem('zxax_api_base');
-                if (saved) return saved.replace(/\/+$/, '');
-            } catch(e) {}
-            return 'http://127.0.0.1:8000';
-        })();
+        const API_BASE = 'http://127.0.0.1:8000';
         let token = localStorage.getItem('zxax_token') || '';
         let stuToken = localStorage.getItem('zxax_stu_token') || '';
         let loginRole = 'teacher';
