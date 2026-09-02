@@ -36,20 +36,16 @@
     <div class="note">平台正在初始化…</div>
   </div>
   <script>
-    // 根据前端是否部署成功，自动跳转
-    const goBtn = document.getElementById('goBtn');
+    // 保留当前 URL 的 ?api= 参数，跳转到平台入口（相对路径，兼容子路径部署）
+    var query = window.location.search;
+    var goBtn = document.getElementById('goBtn');
     goBtn.addEventListener('click', function(e) {
       e.preventDefault();
-      // 尝试跳转到部署好的前端入口
-      const paths = [
-        import.meta.url.replace(/(\?[^]*)?$/, '') + 'frontend.html'  // Vite 环境
-      ];
-      // 直接跳转到平台入口（相对路径，兼容子路径部署）
-      window.location.href = 'static/前端.html';
+      window.location.href = 'static/前端.html' + query;
     });
-    // 自动跳转（页面加载后 1 秒），相对路径兼容子路径部署
+    // 自动跳转（页面加载后 1 秒）
     setTimeout(function() {
-      window.location.href = 'static/前端.html';
+      window.location.href = 'static/前端.html' + query;
     }, 1000);
   </script>
 </body>
